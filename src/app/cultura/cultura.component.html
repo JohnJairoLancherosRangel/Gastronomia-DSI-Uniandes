@@ -1,0 +1,20 @@
+<h1 style="text-align: center;" class="titulos">Culturas Gastronómicas Del Mundo</h1>
+    <!-- Contenido del componente-->
+    
+    <div style="text-align: center;padding: 20px;">
+      <img src="https://i.gifer.com/HZas.gif" width="50%" height="auto" style="border: 8px solid black; border-radius: 10px;">
+    </div>
+    
+<table class="table table-striped" >
+  <thead>
+  <tr>
+  <th scope="col" style="background-color: yellow;">Nombre Cultura Gastronomica</th>
+  </tr>
+  </thead>
+  <tbody >
+    <tr *ngFor="let cultura of culturas">
+      <td><a (click)="seleccionarCultura(cultura)">⭐ {{ cultura.nombre }}</a></td>
+    </tr>
+  </tbody>
+</table>
+  

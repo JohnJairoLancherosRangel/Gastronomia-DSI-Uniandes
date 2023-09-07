@@ -1,0 +1,27 @@
+<h1 style="text-align: center;" class="titulos">Restaurantes Destacados de la Gastronomía {{culturaSeleccionada}}</h1>
+
+<div class="container">
+
+    <div class="row" >
+  
+        <div class="col-lg-6 col-md-6 col-sm-12" *ngFor="let Restaurante of RestaurantesFiltrados">
+
+          <div class="card" style="width: 100%;border: 2px solid black; border-radius: 6px;background-color: yellow;" >
+            <img class="card-img-top" src="{{Restaurante.ImagenUrl}}" alt="Card image cap" width="100%" height="500px">
+            <div class="card-body">
+              <h5 class="card-title" style="font-family: fantasy;">{{ Restaurante.nombre }}</h5>         
+              <p><strong>Culturas Gastronomicas:</strong></p> {{ Restaurante.culturasGastronomicas}}
+              <p><strong>Ciudad / Ubicación:</strong></p> {{Restaurante.ciudad}}
+              <p><strong>Pais:</strong></p> {{Restaurante.pais}}
+              <p><strong> ⭐ Estrellas Michellin ⭐:</strong></p> {{Restaurante.EstrellasMichellin}}
+              <p><strong> Fecha De Consecución:</strong></p> {{Restaurante.FechaConsecucion}}
+            </div>
+            
+            
+          </div>
+  
+        </div>
+  
+    </div>
+    <button type="button" class="btn btn-danger" (click)="VolverAPaises()">Volver</button>
+  </div>

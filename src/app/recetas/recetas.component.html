@@ -1,0 +1,26 @@
+<h1 style="text-align: center;" class="titulos">Recetas Destacadas de la Gastronomía {{culturaSeleccionada}}</h1>
+
+<div class="container">
+
+    <div class="row" >
+  
+        <div class="col-lg-6 col-md-6 col-sm-12" *ngFor="let Receta of RecetasFiltradas">
+
+          <div class="card" style="width: 100%;border: 2px solid black; border-radius: 6px;background-color: yellow;" >
+            <img class="card-img-top" src="{{Receta.FotoUrl}}" alt="Card image cap" width="100%" height="500px">
+            <div class="card-body">
+              <h5 class="card-title" style="font-family: fantasy;">{{ Receta.nombre }}</h5>    
+              <span><strong>Descripción:</strong> {{Receta.descripcion}}</span>     
+              <p><strong>Preparación:</strong></p>
+              <p>{{ Receta.preparacion }}</p> 
+              <a type="button" class="btn btn-danger" href="{{Receta.VideoPreparacion}}" target="_blank">Ver Preparación</a>
+            </div>
+            
+            
+          </div>
+  
+        </div>
+  
+    </div>
+    <button type="button" class="btn btn-danger" (click)="VolverAPaises()">Volver</button>
+  </div>

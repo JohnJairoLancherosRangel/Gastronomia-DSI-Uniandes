@@ -1,0 +1,22 @@
+<div>
+  <h1 style="text-align: center;" class="titulos">!Cultura Gastronomica {{culturaSeleccionada}}¡</h1>
+  <p style="padding: 10px; border: 5px solid black; border-radius: 5px; background-color: azure;"><strong>{{DescripcionCultura}}</strong></p>
+
+  <table class="table table-striped" >
+    <thead>
+    <tr>
+    <th scope="col" style="background-color: yellow;">Países Que Componen La Cultura Gastronomica {{culturaSeleccionada}}</th>
+    </tr>
+    </thead>
+    <tbody >
+      <tr *ngFor="let pais of PaisesFiltrados">
+        <td>{{pais}}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <button style="border-color: black;" type="button" class="btn btn-warning" (click)="IrARecetas()">Ver Recetas</button>
+  <button style="border-color: black;" type="button" class="btn btn-warning" (click)="IrARestaurantes()">Ver Restaurantes</button>
+  <button style="border-color: black;" type="button" class="btn btn-warning" (click)="IrAProductos()">Ver Productos</button>
+  <button style="border-color: black;" type="button" class="btn btn-danger" (click)="Volver()">Volver</button>
+</div>

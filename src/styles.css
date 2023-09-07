@@ -1,1 +1,35 @@
 /* You can add global styles to this file, and also import other style files */
+body{
+    /*background-color: black;*/
+    background-image: linear-gradient(135deg,#bfd400,#cb7428,#e6eb40,#69cb75,#5A4894,#A950A1,#FF7CAE);
+    background-size: 500%;
+    animation: fanimado 10s infinite;
+}
+
+@keyframes fanimado{
+
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+}
+
+.titulos{
+    background-color: black;
+    display: block;
+    text-align: center;
+    justify-content: center;
+    font-size: 50px;
+    font-family: Teko;
+    color: red;
+    -webkit-text-stroke: 1px yellow;
+    margin-top: 2%;
+    border: 2px solid;
+    border-color: white;
+    border-radius: 15px;
+}
